@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos css-->
+    <link rel="stylesheet" href="style.css">
+    <!--Estilo de fuentes font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!--Fuente PT Sans Narrow y Liu Jian Mao Cao-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+    <title>Credit Card</title>
+</head>
+<body>
+
+    <!--Navegación-->   
+        <div class="container">            
+            <nav class="nav-main">
+                <img src="/img/logo.png" alt="Logo" class="nav-img">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="">¿Quienes somos?</a>
+                    </li>
+                    <li>
+                        <a href="">Portafolio de proyectos</a>
+                    </li>
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+                    <li>
+                        <a href="">Contáctenos</a>
+                    </li>
+                </ul>
+                <ul class="nav-mright">
+                    <li>
+                        <a href="">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+    <!-- Contenido-->
+    <h1 class="titulo">Registra los datos de la tarjeta de crédito</h1>
+        <div class="container2">         
+        <!--Tarjeta-->    
+            <secction class="tarjeta" id="tarjeta">               
+                <!--Parte frontal-->
+                <div class="frontal">
+                    <div class="marca" id="marca">
+                        <!--<img src="img/master.png" alt="">-->
+                    </div>
+                    <div class="verificador">
+                        <img src="img/chip.png" alt="" class="chip">
+                        <img src="/img/mapa.jpeg" alt="" class="mapa">
+                    </div>
+                    <div class="datos">
+                        <div class="grupo" id="numero">
+                            <p class="numero">#### #### #### ####</p>
+                        </div>
+                    </div>
+                    <div class="datos">
+                        <div class="grupo" id="nombre">
+                            <p class="nombre">NOMBRE DEL TITULAR</p>
+                        </div>
+                        <div class="grupo" id="expiracion">
+                            <p class="label">MES / AÑO</p>
+                            <p class="expiracion"><span class="mes">**</span> / <span class="anho">**</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Parte reverso-->
+                <div class="reverso">
+                    <div class="magnetica"></div>
+                    <div class="datos">
+                        <div class="grupo" id="firma">
+                            <p class="label">Firma</p>
+                            <div class="firma"><p></p></div>
+                        </div>
+                        <div class="grupo" id="cvv">
+                            <p class="label">CVV</p>
+                            <!--<input class="cvv" type="password" id="" maxlength="3">-->
+                            <p class="cvv"></p>
+                        </div>
+                    </div>
+                    <div class="authorized">
+                        <img src="img/fenix.png" alt="" class="fenix" id="fenix">
+                        <p class="leyenda" id="leyenda">This card has been issued by kallaham and is licensed for anyone to use anywhere for free. It comes whit no warranly. For support issues, please visit: github.com/kallaham</p>
+                    </div>
+                    <a href="#" class="link-banco">www.bank.com</a>
+                    <a href="#" class="link-banco">This card is issued by bank</a>
+                </div>
+            </secction>
+
+            <!--Boton-->
+            <div class="container-btn">
+                <button class="btn-open" id="btn-open">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="btn-open" id="btn-rotate">
+                    <i class="fas fa-reply"></i>
+                </button>
+            </div>
+
+            <!--Formlulario-->
+            <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+                <div class="grupo" id="grupoNum">
+                    <label for="inputNumero">Número de la Tarjeta <span class="mensaje">Si el número de la tarjeta inicia con 4 es Visa, si es 5 es MasterCard</span></label>
+                    <input type="text" id="inputNumero" maxlength="19" autocomplete="off" name="inputNumero" required>
+                </div>
+                <div class="grupo">
+                    <label for="inputNombre">Nombre del Titular</label>
+                    <input type="text" id="inputNombre" maxlength="20" autocomplete="off" name="inputNombre" required>
+                </div>
+                <div class="datosExpira">
+                    <div class="grupo expira">
+                        <label for="selectMes">Expiración</label>
+                        <div class="datosExpira">
+                            <div class="grupo-select">
+                                <select name="mes" id="selectMes" >
+                                    <option disabled selected>Mes</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="grupo-select">
+                                <select name="anho" id="selectAnho">
+                                    <option disabled selected>Año</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grupo cvv">
+                        <label for="inputCvv">CVV</label>
+                        <input type="password" id="inputCvv" maxlength="3" name="inputCvv" required>
+                    </div>
+                </div>
+                    <button type="submit" class="btn-enviar" id="btnEnviar">Enviar  <i class="fa fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+        <h1 class="titulo">Registros guardados</h1>
+        
+        <!--Tabla de registros-->
+        <div class="container3">
+            <table class="table" id="datosTabla">
+                    <tr>
+                        <th>Número de la  tarjeta</th>
+                        <th>Nombre del titular</th>
+                        <th>Mes</th>
+                        <th>Año</th>
+                        <th>CVV (Encriptado B64)</th>
+                    </tr>
+                    <tr>
+                        <td>**** **** *** 4567</td>
+                        <td>Jonathan molina</td>
+                        <td>14</td>
+                        <td>1991</td>
+                        <td>MtZi</td>
+                    </tr>
+            </table>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
